@@ -98,7 +98,6 @@ def fill_count(ship, bonus_accum):
             bonus["count"] += 1
             fill_stars(bonus, improvement)
 
-
 def fill_stars(bonus, improvement):
     if (improvement == -1):
         return bonus
@@ -123,8 +122,7 @@ def add_bonus(bonus, result, ship, synergy):
             for bdef in bonus_definition:
                 add_stats(bdef, ship, result, synergy, bonus)
         else:
-            add_stats(bonus_definition, ship, result, synergy, bonus)
-        
+            add_stats(bonus_definition, ship, result, synergy, bonus)   
 
 def add_stats(bonus_definition, ship, result, synergy, bonus):
     master = ship.master

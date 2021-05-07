@@ -16,12 +16,6 @@ def fetch_ship_master(ship_id):
 def fetch_equip_master(equip_id):
     return next(equip for equip in equip_master if equip["api_id"] == equip_id)
 
-def day_attack_improvements(attacker):
-    return 0
-
-def calculate_bap_anti_install(attacker, defender, base_attack_power):
-    return base_attack_power
-
 def find_ship_origin(ship_id):
     return remodel_db["originOf"][str(ship_id)]
 

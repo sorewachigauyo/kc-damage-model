@@ -35,4 +35,3 @@ def test_gear_bonus():
         'leng': 0,
         'soku': 0
     }
-
