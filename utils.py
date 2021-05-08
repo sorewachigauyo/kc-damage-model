@@ -1,9 +1,11 @@
 import json
 import os
+import numpy as np
 
 fighter_bomber_ids = [60, 154, 219]
 sec_gun_filter = [11, 134, 135]
 t2_fp_list = [1, 2, 18, 19, 21, 24, 29, 42, 36, 37, 39, 46]
+bomber_type2_ids = [7, 8, 11, 41, 47, 53, 57, 58]
 
 with open("./data/api_mst_ship.json", encoding="utf-8") as r:
     ship_master = json.load(r)
@@ -46,12 +48,12 @@ def get_gear_improvement_stats(ship):
         "tp": 0,
         "yasen": 0
     }
-    for idx, equip_id in enumerate(ship.equips):
+    for idx, equip_id in enumerate(ship.equip):
         improvement = ship.stars[idx]
         if equip_id == -1 or improvement <= 0:
             continue
         master = fetch_equip_master(equip_id)
-        type2 = master.api_type[2]
+        type2 = master["api_type"][2]
 
         # FP
         # Large Gun
@@ -61,9 +63,11 @@ def get_gear_improvement_stats(ship):
         elif type2 == 4:
             if equip_id in sec_gun_filter:
                 result["fp"] += np.sqrt(improvement)
+                result["yasen"] += np.sqrt(improvement)
             else:
                 mod = 0.2 if master.api_type[3] == 16 else 0.3
                 result["fp"] += mod * improvement
+                result["yasen"] += mod * improvement
         # F/B and Jet F/B
         elif (type2 == 7 or type2 == 57) and equip_id in fighter_bomber_ids:
             result["fp"] += 0.5 * np.sqrt(improvement)
@@ -93,5 +97,11 @@ def get_gear_improvement_stats(ship):
         elif type2 == 25:
             mod = 0.3 if master.api_tais > 10 else 0.2
             result["asw"] += mod * improvement
+
+        # Yasen
+        if type2 in [1, 2, 3, 5, 19, 22, 24, 29, 32, 36, 37, 38, 42, 46]:
+            result["yasen"] += np.sqrt(improvement)
+        elif type2 in [7, 8, 57, 58]:
+            result["yasen"] += np.sqrt(improvement)
 
     return result

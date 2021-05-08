@@ -73,6 +73,9 @@ def fill_synergy(ship, synergy):
                     base_key = key[0: -3]
                     if equip_id in synergy[key]:
                         synergy[base_key] += 1
+                        nonexist = base_key + "Nonexist"
+                        if nonexist in synergy.keys():
+                            synergy[nonexist] = 0
 
 def fill_count(ship, bonus_accum):
     for idx, equip_id in enumerate(ship.equip):
@@ -110,8 +113,7 @@ def fill_stars(bonus, improvement):
     return bonus
 
 def add_bonus(bonus, result, ship, synergy):
-    master = ship.master
-    ctype = master["api_ctype"]
+    ctype = ship.ctype
     if "byClass" in bonus and str(ctype) in bonus["byClass"].keys():
         bonus_definition = bonus["byClass"][str(ctype)]
         # Linked to another ctype
@@ -125,8 +127,7 @@ def add_bonus(bonus, result, ship, synergy):
             add_stats(bonus_definition, ship, result, synergy, bonus)   
 
 def add_stats(bonus_definition, ship, result, synergy, bonus):
-    master = ship.master
-    ctype = master["api_ctype"]
+    ctype = ship.ctype
     keys = bonus_definition.keys()
     origin = find_ship_origin(ship.id)
     remodel_group = find_remodel_group(ship.id)
