@@ -4,8 +4,9 @@ vanguard_asw = lambda position, shipcount: 0.6 if position >= int(shipcount / 2)
 formation_modifiers_shelling = [0, 1.0, 0.8, 0.7, 0.75, 0.6, vanguard_shelling, 0, 0, 0, 0, 0.8, 1.0, 0.7, 1.1]
 formation_modifiers_asw = [0, 0.6, 0.8, 1.2, 1.1 , 1.3, vanguard_asw, 0, 0, 0, 0, 1.3, 1.1, 1.0, 0.7]
 engagement_modifiers = [0, 1, 0.8, 1.2, 0.6]
-day_shelling_cap = 180
-asw_cap = 150
+day_shelling_cap = 220
+asw_cap = 170
+night_cap = 360
 
 day_cutin_modifiers = {
     "2": 1.2,
