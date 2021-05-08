@@ -19,7 +19,6 @@ class DayAttackModel(BaseAttackModel):
         bonus_stats = calculate_bonus_gear_stats(ship)
         cf_factor = calculate_combined_fleet_factor(ship, self._defender)
         enemy = self._defender
-
         # ASW attack
         if enemy.is_submarine():
             base_attack_power = calculate_base_asw_power(ship, improvements)
@@ -70,7 +69,7 @@ class DayAttackModel(BaseAttackModel):
                 if equip_id == 163:
                     num_203 += 1
             num += np.sqrt(num_203)
-        
+
         return base_attack_power * health_mod * formation_mod * engagement_mod + num
 
     def calculate_capped_power(self, precapped_power):
@@ -90,10 +89,10 @@ class DayAttackModel(BaseAttackModel):
                 else:
                     crit_mod = ship.crit_modifier()
 
-            return int(capped_power * 1.5 * crit_mod * mult)
+            return capped_power * 1.5 * crit_mod * mult
 
         else:
-            return int(capped_power)
+            return capped_power
 
     def calculate_postcap_power(self, postcrit_power, add=0, mult=1):
         """

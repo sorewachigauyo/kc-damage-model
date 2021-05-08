@@ -126,6 +126,14 @@ def add_bonus(bonus, result, ship, synergy):
         else:
             add_stats(bonus_definition, ship, result, synergy, bonus)   
 
+    if "byShip" in bonus:
+        bonus_definition = bonus["byShip"]
+        if isinstance(bonus_definition, list):
+            for bdef in bonus_definition:
+                add_stats(bdef, ship, result, synergy, bonus)
+        else:
+            add_stats(bonus_definition, ship, result, synergy, bonus)
+
 def add_stats(bonus_definition, ship, result, synergy, bonus):
     ctype = ship.ctype
     keys = bonus_definition.keys()
