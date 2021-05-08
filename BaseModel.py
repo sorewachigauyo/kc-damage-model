@@ -21,8 +21,7 @@ class BaseAttackModel:
         self._actual_damage = dmginst["actualDamage"]
         self._engagement = data["engagement"]
 
-    # add before mult, in case of certain combinations
-    def calculate_base_attack_power(self, add=0, mult=1) -> Union[float, int]:
+    def calculate_base_attack_power(self) -> Union[float, int]:
         raise NotImplementedError()
 
     def calculate_precapped_power(self, base_attack_power) -> Union[float, int]:
@@ -35,8 +34,7 @@ class BaseAttackModel:
     def calculate_critical_power(self, capped_power, add=0, mult=1) -> int:
         raise NotImplementedError()
 
-    # add and mult for flooring
-    def calculate_postcap_power(self, crit_cap_power, add=0, mult=1) -> Union[float, int]:
+    def calculate_postcap_power(self, crit_cap_power) -> Union[float, int]:
         raise NotImplementedError()
 
     def calculate_damage(self, postcap_power, armor, armor_reduction=0):
