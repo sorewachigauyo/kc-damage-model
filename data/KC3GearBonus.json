@@ -483,7 +483,7 @@
 		"byClass": {
 			"6": {
 				"remodel": 3,
-				"multiple": {
+				"single": {
 					"houg": 1,
 					"tyku": 1
 				}
@@ -725,13 +725,25 @@
 			"multiple": {
 				"houg": 1
 			},
-			"synergy": {
+			"synergy": [{
 				"flags": ["surfaceRadar"],
 				"single": {
 					"houg": 1,
 					"houk": 1
 				}
-			}
+			}, {
+				"flags": ["type21AirRadar"],
+				"single": {
+					"houg": 1,
+					"tyku": 3,
+					"houk": 2
+				}
+			}, {
+				"flags": ["type21AirRadarK2"],
+				"single": {
+					"houg": 2
+				}
+			}]
 		}
 	},
 	"52": {
@@ -844,6 +856,7 @@
 				}
 			}, {
 				"minStars": 8,
+				"remodel": 2,
 				"single": {
 					"houg": 1,
 					"saku": 1
@@ -917,12 +930,16 @@
 			"10": "1"
 		},
 		"byShip": [{
-			"ids": [144],
+			"origins": [45],
 			"multiple": {
 				"houg": 1,
-				"raig": 1,
 				"tyku": 1,
 				"houk": 2
+			}
+		}, {
+			"ids": [144],
+			"multiple": {
+				"raig": 1
 			}
 		}, {
 			"ids": [145, 627],
@@ -930,7 +947,7 @@
 				"houg": 1
 			}
 		}, {
-			"ids": [242, 497, 498],
+			"ids": [242, 497, 244, 498],
 			"multiple": {
 				"houk": 1
 			}
@@ -1147,7 +1164,7 @@
 				"remodel": 3,
 				"single": {
 					"raig": 1,
-					"houk": 1
+					"houk": 2
 				}
 			}, {
 				"remodel": 3,
@@ -1287,13 +1304,13 @@
 			},
 			"17": {
 				"remodel": 2,
-				"multiple": {
+				"single": {
 					"houg": 6
 				}
 			},
 			"25": {
 				"remodel": 2,
-				"multiple": {
+				"single": {
 					"houg": 3
 				}
 			}
@@ -1463,9 +1480,7 @@
 				"houg": 5,
 				"tyku": 3,
 				"houk": 2
-			}
-		}, {
-			"ids": [656],
+			},
 			"synergy": [{
 				"flags": ["surfaceRadar"],
 				"single": {
@@ -1505,7 +1520,6 @@
 			"7": {
 				"multiple": {
 					"houg": 1,
-					"raig": 2,
 					"houk": 2,
 					"saku": 3
 				}
@@ -1814,7 +1828,15 @@
 					"houk": 2
 				}
 			}
-		}
+		},
+		"byShip": [{
+			"ids": [488],
+			"multiple": {
+				"houg": 2,
+				"raig": 4,
+				"houk": 4
+			}
+		}]
 	},
 	"179": {
 		"count": 0,
@@ -2116,44 +2138,46 @@
 					}
 				}]
 			},
-			"66": "28",
-			"74": {
-				"minStars": 7,
-				"multiple": {
-					"houg": 1,
-					"tyku": 1
-				},
-				"synergy": {
-					"flags": ["surfaceRadar"],
-					"single": {
-						"houg": 1,
-						"houk": 4
-					}
-				}
-			},
-			"77": "74",
-			"85": "74"
+			"66": "28"
 		},
 		"byShip": [{
-			"ids": [487],
+			"stypes": [1],
 			"minStars": 7,
 			"multiple": {
-				"houg": 2,
-				"tyku": 2
+				"houg": 1,
+				"tyku": 1
 			},
 			"synergy": {
 				"flags": ["surfaceRadar"],
 				"single": {
-					"houg": 3,
-					"houk": 2
+					"houg": 1,
+					"houk": 4
 				}
 			}
 		}, {
-			"ids": [488],
+			"origins": [56, 113],
+			"minStars": 7,
+			"multiple": {
+				"houg": 2
+			}
+		}, {
+			"origins": [23],
 			"minStars": 7,
 			"multiple": {
 				"houg": 2,
-				"tyku": 3
+				"tyku": 1
+			}
+		}, {
+			"ids": [220, 224, 289],
+			"minStars": 7,
+			"multiple": {
+				"tyku": 1
+			}
+		}, {
+			"ids": [160, 487, 488],
+			"minStars": 7,
+			"multiple": {
+				"tyku": 2
 			},
 			"synergy": {
 				"flags": ["surfaceRadar"],
@@ -2480,6 +2504,10 @@
 					"houk": 2
 				}
 			},
+			"69": "95",
+			"78": "67",
+			"83": "95",
+			"84": "95",
 			"88": "67",
 			"93": "95",
 			"95": {
@@ -2515,6 +2543,10 @@
 					"saku": 1
 				}
 			},
+			"69": "95",
+			"78": "67",
+			"83": "95",
+			"84": "95",
 			"88": "67",
 			"93": "95",
 			"95": {
@@ -2724,6 +2756,7 @@
 		}, {
 			"ids": [624],
 			"multiple": {
+				"houg": 1,
 				"houk": 2,
 				"tais": 3
 			}
@@ -2814,14 +2847,7 @@
 					"houg": 6,
 					"houk": 1
 				}
-			},
-			"17": {
-				"remodel": 2,
-				"single": {
-					"leng": 1
-				}
-			},
-			"25": "17"
+			}
 		}
 	},
 	"292": {
@@ -2834,14 +2860,7 @@
 					"tyku": 1,
 					"houk": 2
 				}
-			},
-			"17": {
-				"remodel": 2,
-				"single": {
-					"leng": 1
-				}
-			},
-			"25": "17"
+			}
 		}
 	},
 	"293": {
@@ -3071,32 +3090,30 @@
 			"ids": [497],
 			"multiple": {
 				"houg": 1,
-				"houk": 2
+				"houk": 1
 			}
 		}, {
 			"ids": [144],
 			"multiple": {
 				"houg": 1,
-				"raig": 1,
-				"houk": 1
+				"raig": 1
 			}
 		}, {
 			"ids": [145],
 			"multiple": {
 				"houg": 1,
-				"tyku": 1,
-				"houk": 1
+				"tyku": 1
 			}
 		}, {
 			"ids": [498],
 			"multiple": {
 				"tyku": 1,
-				"houk": 2
+				"houk": 1
 			}
 		}, {
-			"ids": [469, 587],
+			"ids": [469, 587, 242, 244],
 			"multiple": {
-				"houk": 2
+				"houk": 1
 			}
 		}, {
 			"ids": [627],
@@ -3327,7 +3344,7 @@
 		"count": 0,
 		"byClass": {
 			"65": {
-				"single": {
+				"multiple": {
 					"houg": 1,
 					"tyku": 1,
 					"houk": 1
@@ -3358,6 +3375,7 @@
 				}
 			},
 			"91": "87",
+			"99": "87",
 			"106": "87"
 		},
 		"byShip": [{
@@ -3426,6 +3444,7 @@
 			}, {
 				"minStars": 10,
 				"multiple": {
+					"houg": 2,
 					"houk": 2
 				}
 			}],
@@ -3484,7 +3503,7 @@
 		"count": 0,
 		"byClass": {
 			"65": {
-				"single": {
+				"multiple": {
 					"houg": 2,
 					"houk": 3,
 					"saku": 4
@@ -3493,14 +3512,17 @@
 			"69": "65",
 			"83": "65",
 			"84": "65",
-			"87": {
-				"single": {
+			"87": [{
+				"multiple": {
 					"houg": 3,
 					"houk": 3,
-					"saku": 4,
+					"saku": 4
+				}
+			}, {
+				"single": {
 					"leng": 1
 				}
-			},
+			}],
 			"91": "87",
 			"93": "65",
 			"95": "65",
@@ -3541,6 +3563,7 @@
 					"tyku": 1
 				}
 			}, {
+				"remodel": 3,
 				"single": {
 					"houg": 2,
 					"tyku": 2
@@ -3654,7 +3677,8 @@
 				"single": {
 					"houg": 1,
 					"souk": 1,
-					"houk": 2
+					"houk": 2,
+					"houm": 1
 				}
 			}
 		}]
@@ -3749,17 +3773,14 @@
 	},
 	"324": {
 		"count": 0,
-		"byClass": {
-			"2": {
-				"remodel": 2,
-				"multiple": {
-					"houg": 1,
-					"tais": 2,
-					"houk": 1
-				}
-			}
-		},
 		"byShip": [{
+			"ids": [553],
+			"multiple": {
+				"houg": 1,
+				"tais": 2,
+				"houk": 1
+			}
+		}, {
 			"ids": [554, 646],
 			"multiple": {
 				"houg": 2,
@@ -3770,17 +3791,14 @@
 	},
 	"325": {
 		"count": 0,
-		"byClass": {
-			"2": {
-				"remodel": 2,
-				"multiple": {
-					"houg": 1,
-					"tais": 2,
-					"houk": 1
-				}
-			}
-		},
 		"byShip": [{
+			"ids": [553],
+			"multiple": {
+				"houg": 1,
+				"tais": 2,
+				"houk": 1
+			}
+		}, {
 			"ids": [554, 646],
 			"multiple": {
 				"houg": 2,
@@ -3791,17 +3809,14 @@
 	},
 	"326": {
 		"count": 0,
-		"byClass": {
-			"2": {
-				"remodel": 2,
-				"multiple": {
-					"houg": 1,
-					"tais": 3,
-					"houk": 1
-				}
-			}
-		},
 		"byShip": [{
+			"ids": [553],
+			"multiple": {
+				"houg": 1,
+				"tais": 3,
+				"houk": 1
+			}
+		}, {
 			"ids": [554],
 			"multiple": {
 				"houg": 3,
@@ -3819,17 +3834,14 @@
 	},
 	"327": {
 		"count": 0,
-		"byClass": {
-			"2": {
-				"remodel": 2,
-				"multiple": {
-					"houg": 2,
-					"tais": 4,
-					"houk": 1
-				}
-			}
-		},
 		"byShip": [{
+			"ids": [553],
+			"multiple": {
+				"houg": 2,
+				"tais": 4,
+				"houk": 1
+			}
+		}, {
 			"ids": [554],
 			"multiple": {
 				"houg": 4,
@@ -3863,15 +3875,22 @@
 				"multiple": {
 					"houg": 1
 				}
-			}, {
-				"remodel": 3,
-				"multiple": {
-					"houg": 1,
-					"raig": 1
-				}
 			}],
 			"26": "2"
-		}
+		},
+		"byShip": [{
+			"ids": [591],
+			"multiple": {
+				"houg": 1,
+				"raig": 1
+			}
+		}, {
+			"ids": [592],
+			"multiple": {
+				"houg": 1,
+				"tyku": 1
+			}
+		}]
 	},
 	"329": {
 		"count": 0,
@@ -3920,12 +3939,16 @@
 					"houg": 1
 				}
 			}],
-			"88": {
+			"88": [{
+				"multiple": {
+					"houg": 1
+				}
+			}, {
 				"remodel": 1,
 				"multiple": {
-					"houg": 2
+					"houg": 1
 				}
-			},
+			}],
 			"93": {
 				"multiple": {
 					"houg": 1
@@ -3946,12 +3969,16 @@
 					"houg": 1
 				}
 			}],
-			"88": {
+			"88": [{
+				"multiple": {
+					"houg": 1
+				}
+			}, {
 				"remodel": 1,
 				"multiple": {
-					"houg": 2
+					"houg": 1
 				}
-			},
+			}],
 			"93": [{
 				"multiple": {
 					"houg": 1
@@ -3978,12 +4005,16 @@
 					"houg": 1
 				}
 			}],
-			"88": {
+			"88": [{
+				"multiple": {
+					"houg": 1
+				}
+			}, {
 				"remodel": 1,
 				"multiple": {
-					"houg": 2
+					"houg": 1
 				}
-			},
+			}],
 			"93": [{
 				"multiple": {
 					"houg": 1
@@ -4126,6 +4157,13 @@
 	"341": {
 		"count": 0,
 		"byClass": {
+			"89": {
+				"multiple": {
+					"houg": 1,
+					"tyku": 1,
+					"houk": 1
+				}
+			},
 			"92": {
 				"multiple": {
 					"houg": 2,
@@ -4145,7 +4183,7 @@
 				}
 			},
 			"14": "3",
-			"43": {
+			"33": {
 				"remodel": 2,
 				"multiple": {
 					"houg": 1
@@ -4178,7 +4216,7 @@
 				}
 			},
 			"14": "3",
-			"43": {
+			"33": {
 				"remodel": 2,
 				"multiple": {
 					"houg": 1
@@ -4205,37 +4243,37 @@
 		"count": 0,
 		"byShip": [{
 			"ids": [318],
-			"single": {
+			"multiple": {
 				"houg": 4,
 				"tais": 1
 			}
 		}, {
 			"ids": [888],
-			"single": {
+			"multiple": {
 				"houg": 4,
 				"tais": 2
 			}
 		}, {
 			"ids": [883],
-			"single": {
+			"multiple": {
 				"houg": 5,
 				"tais": 2
 			}
 		}, {
 			"ids": [555, 560],
-			"single": {
+			"multiple": {
 				"houg": 2,
 				"tais": 2
 			}
 		}, {
 			"ids": [282],
-			"single": {
+			"multiple": {
 				"houg": 2,
 				"tais": 1
 			}
 		}, {
 			"ids": [599, 610],
-			"single": {
+			"multiple": {
 				"houg": 3
 			}
 		}]
@@ -4244,42 +4282,42 @@
 		"count": 0,
 		"byShip": [{
 			"ids": [318],
-			"single": {
+			"multiple": {
 				"houg": 5,
 				"tais": 1,
-				"houk": 1
+				"houk": 2
 			}
 		}, {
 			"ids": [888],
-			"single": {
+			"multiple": {
 				"houg": 4,
 				"tais": 2,
 				"houk": 2
 			}
 		}, {
 			"ids": [883],
-			"single": {
+			"multiple": {
 				"houg": 5,
 				"tais": 2,
 				"houk": 3
 			}
 		}, {
 			"ids": [555, 560],
-			"single": {
+			"multiple": {
 				"houg": 3,
 				"tais": 2,
 				"houk": 2
 			}
 		}, {
 			"ids": [282],
-			"single": {
+			"multiple": {
 				"houg": 3,
 				"tais": 1,
 				"houk": 1
 			}
 		}, {
 			"ids": [599, 610],
-			"single": {
+			"multiple": {
 				"houg": 3,
 				"houk": 1
 			}
@@ -4339,6 +4377,7 @@
 					"houk": 3
 				}
 			},
+			"99": "67",
 			"102": "67",
 			"105": "67",
 			"106": "67",
@@ -4543,13 +4582,13 @@
 				"houk": -2
 			}
 		}, {
-			"ids": [118, 586, 657],
+			"ids": [118, 586, 657, 506, 668],
 			"multiple": {
 				"raig": 1,
 				"houk": -2
 			}
 		}, {
-			"stypes": [4, 13, 14, 16],
+			"stypes": [3, 4, 13, 14, 16],
 			"excludes": [118, 119, 506, 586, 623, 657, 668],
 			"multiple": {
 				"houg": -1,
@@ -4561,44 +4600,42 @@
 		"count": 0,
 		"byClass": {
 			"2": {
-				"remodel": 1,
-				"multiple": {
+				"single": {
 					"houg": 1
 				}
 			},
 			"6": [{
-				"remodel": 1,
-				"multiple": {
+				"single": {
 					"houg": 1
 				}
 			}, {
 				"remodel": 3,
-				"multiple": {
+				"single": {
 					"houg": 2
 				}
 			}],
 			"19": [{
-				"multiple": {
+				"single": {
 					"houg": 1
 				}
 			}, {
 				"remodel": 2,
-				"multiple": {
+				"single": {
 					"houg": 1
 				}
 			}],
 			"26": {
-				"multiple": {
+				"single": {
 					"houg": 1
 				}
 			},
 			"37": [{
-				"multiple": {
+				"single": {
 					"houg": 1
 				}
 			}, {
 				"remodel": 1,
-				"multiple": {
+				"single": {
 					"houg": 1
 				}
 			}]
@@ -4686,7 +4723,7 @@
 			}]
 		},
 		"byShip": [{
-			"ids": [566, 567, 568],
+			"ids": [566, 567, 568, 656],
 			"multiple": {
 				"houg": 1,
 				"tyku": 2
@@ -5290,24 +5327,24 @@
 		}, {
 			"ids": [888],
 			"multiple": {
-				"houg": 1
+				"houg": 2
 			}
 		}, {
 			"ids": [888],
 			"single": {
-				"raig": 2,
-				"houk": 3
+				"raig": 1,
+				"houk": 1
 			}
 		}, {
 			"ids": [883],
 			"multiple": {
-				"houg": 2
+				"houg": 1
 			}
 		}, {
 			"ids": [883],
 			"single": {
-				"raig": 1,
-				"houk": 1
+				"raig": 2,
+				"houk": 3
 			}
 		}]
 	},
@@ -5351,6 +5388,7 @@
 				}
 			},
 			"91": "87",
+			"95": "87",
 			"96": {
 				"multiple": {
 					"houg": 1,
@@ -5358,6 +5396,7 @@
 				}
 			},
 			"99": "87",
+			"106": "87",
 			"108": "82"
 		}
 	},
@@ -5542,7 +5581,7 @@
 			"origins": [24, 25],
 			"multiple": {
 				"houg": 2,
-				"tais": 2
+				"tyku": 2
 			}
 		}, {
 			"ids": [23, 22, 219, 56, 224, 113, 289],
@@ -5749,6 +5788,11 @@
 			"ids": [652, 657],
 			"multiple": {
 				"houg": 3
+			}
+		}, {
+			"ids": [146, 547],
+			"single": {
+				"houg": 2
 			}
 		}, {
 			"ids": [146, 547, 652, 657],
@@ -6222,7 +6266,17 @@
 				"houg": 1
 			}
 		}, {
-			"ids": [117, 555, 560, 318, 883, 888],
+			"ids": [117, 318, 883, 888],
+			"multiple": {
+				"houg": 1
+			}
+		}, {
+			"ids": [117, 318, 883, 888],
+			"single": {
+				"houk": 1
+			}
+		}, {
+			"ids": [555, 560],
 			"multiple": {
 				"houg": 1,
 				"houk": 1
@@ -6669,6 +6723,87 @@
 			"101": "1"
 		}
 	},
+	"413": {
+		"count": 0,
+		"byClass": {
+			"1": {
+				"single": {
+					"houg": 2,
+					"raig": 2,
+					"houk": 4
+				}
+			},
+			"4": {
+				"single": {
+					"houg": 5,
+					"raig": 4,
+					"houk": 5
+				}
+			},
+			"5": "1",
+			"10": "1",
+			"12": "1",
+			"16": "4",
+			"18": "1",
+			"20": "4",
+			"21": {
+				"single": {
+					"houg": 4,
+					"raig": 3,
+					"tyku": 2,
+					"houk": 3
+				}
+			},
+			"22": "1",
+			"23": "1",
+			"28": "1",
+			"30": "1",
+			"34": "21",
+			"38": {
+				"single": {
+					"houg": 4,
+					"raig": 5,
+					"houk": 7
+				}
+			},
+			"41": "4",
+			"52": "4",
+			"54": "38",
+			"56": {
+				"single": {
+					"houg": 4,
+					"raig": 2,
+					"houk": 2
+				}
+			},
+			"66": "1",
+			"101": "1"
+		},
+		"byShip": [{
+			"origins": [56, 23, 139, 138, 484, 50, 41],
+			"single": {
+				"tyku": 1,
+				"houk": 1
+			}
+		}, {
+			"origins": [55, 54, 135, 41, 422],
+			"single": {
+				"houg": 1,
+				"raig": 1
+			}
+		}, {
+			"ids": [159],
+			"single": {
+				"houg": 2
+			}
+		}, {
+			"ids": [543],
+			"single": {
+				"houg": 1,
+				"houk": 1
+			}
+		}]
+	},
 	"414": {
 		"count": 0,
 		"starsDist": [],
@@ -6706,6 +6841,43 @@
 				}
 			}, {
 				"minStars": 10,
+				"single": {
+					"houg": 1
+				}
+			}],
+			"99": "95",
+			"102": "65",
+			"106": "95",
+			"107": "65"
+		}
+	},
+	"415": {
+		"count": 0,
+		"starsDist": [],
+		"byClass": {
+			"65": [{
+				"single": {
+					"saku": 1,
+					"tais": 1
+				}
+			}, {
+				"minStars": 5,
+				"single": {
+					"houk": 1
+				}
+			}],
+			"93": "65",
+			"95": [{
+				"single": {
+					"houg": 1
+				}
+			}, {
+				"minStars": 3,
+				"single": {
+					"houk": 1
+				}
+			}, {
+				"minStars": 8,
 				"single": {
 					"houg": 1
 				}
@@ -6757,7 +6929,11 @@
 		"skilledLookouts": 0,
 		"skilledLookoutsIds": [129, 412],
 		"searchlightSmall": 0,
-		"searchlightSmallIds": [74]
+		"searchlightSmallIds": [74],
+		"type21AirRadar": 0,
+		"type21AirRadarIds": [30, 410],
+		"type21AirRadarK2": 0,
+		"type21AirRadarK2Ids": [410]
 	},
 	"t2_9": {
 		"count": 0,
