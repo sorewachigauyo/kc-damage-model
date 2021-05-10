@@ -164,7 +164,7 @@ def add_stats(bonus_definition, ship, result, synergy, bonus):
     
     count = bonus["count"]
     if "minStars" in keys:
-        count = sum(bonus["starsDist"][bonus_definition["minStars"]])
+        count = sum(bonus["starsDist"][bonus_definition["minStars"]:])
         if count == 0:
             return
 
