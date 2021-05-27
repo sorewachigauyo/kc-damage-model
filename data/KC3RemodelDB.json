@@ -5550,6 +5550,21 @@
 			"devmat": 100,
 			"torch": 20
 		},
+		"598": {
+			"ship_id_from": 598,
+			"ship_id_to": 711,
+			"level": 45,
+			"steel": 480,
+			"ammo": 400,
+			"catapult": 0,
+			"blueprint": 0,
+			"report": 0,
+			"gunmat": 0,
+			"airmat": 0,
+			"armmat": 0,
+			"devmat": 0,
+			"torch": 0
+		},
 		"599": {
 			"ship_id_from": 599,
 			"ship_id_to": 594,
@@ -5955,6 +5970,21 @@
 			"devmat": 0,
 			"torch": 0
 		},
+		"645": {
+			"ship_id_from": 645,
+			"ship_id_to": 650,
+			"level": 60,
+			"steel": 700,
+			"ammo": 0,
+			"catapult": 0,
+			"blueprint": 0,
+			"report": 0,
+			"gunmat": 0,
+			"airmat": 0,
+			"armmat": 0,
+			"devmat": 0,
+			"torch": 0
+		},
 		"646": {
 			"ship_id_from": 646,
 			"ship_id_to": 698,
@@ -5969,6 +5999,21 @@
 			"armmat": 0,
 			"devmat": 60,
 			"torch": 30
+		},
+		"650": {
+			"ship_id_from": 650,
+			"ship_id_to": 699,
+			"level": 60,
+			"steel": 280,
+			"ammo": 130,
+			"catapult": 0,
+			"blueprint": 0,
+			"report": 0,
+			"gunmat": 0,
+			"airmat": 0,
+			"armmat": 0,
+			"devmat": 0,
+			"torch": 0
 		},
 		"651": {
 			"ship_id_from": 651,
@@ -6105,6 +6150,21 @@
 			"devmat": 0,
 			"torch": 0
 		},
+		"675": {
+			"ship_id_from": 675,
+			"ship_id_to": 710,
+			"level": 30,
+			"steel": 110,
+			"ammo": 150,
+			"catapult": 0,
+			"blueprint": 0,
+			"report": 0,
+			"gunmat": 0,
+			"airmat": 0,
+			"armmat": 0,
+			"devmat": 0,
+			"torch": 0
+		},
 		"690": {
 			"ship_id_from": 690,
 			"ship_id_to": 586,
@@ -6149,6 +6209,21 @@
 			"armmat": 0,
 			"devmat": 88,
 			"torch": 30
+		},
+		"699": {
+			"ship_id_from": 699,
+			"ship_id_to": 645,
+			"level": 60,
+			"steel": 380,
+			"ammo": 0,
+			"catapult": 0,
+			"blueprint": 0,
+			"report": 0,
+			"gunmat": 0,
+			"airmat": 0,
+			"armmat": 0,
+			"devmat": 0,
+			"torch": 0
 		},
 		"882": {
 			"ship_id_from": 882,
@@ -7362,6 +7437,11 @@
 			"group": [597, 696],
 			"final_forms": [696]
 		},
+		"598": {
+			"origin": 598,
+			"group": [598, 711],
+			"final_forms": [711]
+		},
 		"601": {
 			"origin": 601,
 			"group": [601, 1496],
@@ -7476,6 +7556,11 @@
 			"origin": 671,
 			"group": [671, 709],
 			"final_forms": [709]
+		},
+		"675": {
+			"origin": 675,
+			"group": [675, 710],
+			"final_forms": [710]
 		},
 		"882": {
 			"origin": 882,
@@ -8048,6 +8133,7 @@
 		"595": 595,
 		"596": 596,
 		"597": 597,
+		"598": 598,
 		"599": 83,
 		"600": 595,
 		"601": 601,
@@ -8105,6 +8191,7 @@
 		"665": 15,
 		"668": 139,
 		"671": 671,
+		"675": 675,
 		"678": 551,
 		"679": 552,
 		"680": 484,
@@ -8132,6 +8219,8 @@
 		"706": 642,
 		"708": 644,
 		"709": 671,
+		"710": 675,
+		"711": 598,
 		"882": 882,
 		"883": 184,
 		"887": 882,
@@ -8139,6 +8228,6 @@
 		"893": 520,
 		"1496": 601
 	},
-	"shipCount": 1151,
-	"upgradeCount": 218
+	"shipCount": 1168,
+	"upgradeCount": 222
 }
