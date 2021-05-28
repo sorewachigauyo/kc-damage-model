@@ -32,11 +32,11 @@ class DayAttackModel(BaseAttackModel):
             fp = ship.stats["fp"] + improvements["fp"] + bonus_stats["houg"] + eq_fp
             tp = eq_tp + improvements["tp"]
 
-            base_attack_power = 50 + 1.5 * (fp + tp + int(1.3 * eq_bomb) + cf_factor)
+            base_attack_power = 50 + 1.5 * (fp + tp + int(1.3 * eq_bomb) + cf_factor) + 5
 
         else:
             eq_fp = calculate_all_equipment_stat(ship.equip, "houg")
-            base_attack_power = ship.stats["fp"] + improvements["fp"] + bonus_stats["houg"] + eq_fp + cf_factor
+            base_attack_power = ship.stats["fp"] + improvements["fp"] + bonus_stats["houg"] + eq_fp + cf_factor + 5
         return base_attack_power
 
     def calculate_precapped_power(self, base_attack_power):
@@ -122,4 +122,5 @@ def calculate_combined_fleet_factor(attacker, defender):
             return 10 if main_fleet else -5
         if player_combined == 3: # TCF
             return -5 if main_fleet else -5
-    return 5
+        return 5
+    return 0
